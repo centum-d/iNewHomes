@@ -49,6 +49,14 @@ return [
                     ],
                     'pluralize' => false,
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'city',
+                    'extraPatterns' => [
+                        '{id}/<name:\w+>' => 'options',
+                    ],
+                    'pluralize' => false,
+                ],
                 '/' => 'site/index',
                 '<_a>' => 'site/<_a>',
 //                '<_c>/<id:\d+>' => '<_c>/view',

@@ -78,6 +78,16 @@ class SiteController extends Controller
     }
 
     /**
+     * Search page
+     *
+     * @return mixed
+     */
+    public function actionSearch()
+    {
+        return $this->render('search');
+    }
+
+    /**
      * Logs in a user.
      *
      * @return mixed

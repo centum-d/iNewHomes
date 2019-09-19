@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d49dccdd5bd737962d802f423a3b47a",
+    "content-hash": "186d35301d58078084c75345a14ad984",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -328,6 +328,102 @@
                 "html"
             ],
             "time": "2019-07-14T18:58:38+00:00"
+        },
+        {
+            "name": "npm-asset/axios",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:axios/axios.git",
+                "reference": "93e69625a69ef7bbcf14c9bcb2a1cba2d4b5a126"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axios/axios/zipball/93e69625a69ef7bbcf14c9bcb2a1cba2d4b5a126",
+                "reference": "93e69625a69ef7bbcf14c9bcb2a1cba2d4b5a126"
+            },
+            "require": {
+                "npm-asset/follow-redirects": "1.5.10",
+                "npm-asset/is-buffer": ">=2.0.2,<3.0.0"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ],
+            "time": "2019-09-16T08:58:58+00:00"
+        },
+        {
+            "name": "npm-asset/debug",
+            "version": "3.1.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz"
+            },
+            "require": {
+                "npm-asset/ms": "2.0.0"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/follow-redirects",
+            "version": "1.5.10",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.5.10.tgz"
+            },
+            "require": {
+                "npm-asset/debug": "3.1.0"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/is-buffer",
+            "version": "2.0.3",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/is-buffer/-/is-buffer-2.0.3.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/ms",
+            "version": "2.0.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/vue",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vuejs/vue.git",
+                "reference": "0948d999f2fddf9f90991956493f976273c5da1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vuejs/vue/zipball/0948d999f2fddf9f90991956493f976273c5da1f",
+                "reference": "0948d999f2fddf9f90991956493f976273c5da1f"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-10-13T03:07:14+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -682,12 +778,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "3b00349036e6cd4fdda2bff2ffe34d1da79c1054"
+                "reference": "0d11a5806b8b67ab502514d8e82a37cc53ce6bbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/3b00349036e6cd4fdda2bff2ffe34d1da79c1054",
-                "reference": "3b00349036e6cd4fdda2bff2ffe34d1da79c1054",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/0d11a5806b8b67ab502514d8e82a37cc53ce6bbe",
+                "reference": "0d11a5806b8b67ab502514d8e82a37cc53ce6bbe",
                 "shasum": ""
             },
             "require": {
@@ -774,7 +870,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2019-09-18T10:40:10+00:00"
+            "time": "2019-09-18T13:04:37+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
