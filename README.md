@@ -48,3 +48,16 @@ NOTE: We create only tables in DB with necessary fields to import data. Further 
 This template contains two predefined environments: `prod` and `dev`.
 
 We have to use only `dev` environment as this is a test app and we do not need `prod` environment.
+
+## Task 2
+
+1. Get all complexes with pagination:
+    - ```http://127.0.0.1:20080/complex```
+    - ```http://127.0.0.1:20080/complex?page=2```
+2. Get complexes with some fields only
+    - ```http://127.0.0.1:20080/complex?fields[complexes]=name,address``` 
+3. Filter complexes by field
+    - ```http://127.0.0.1:20080/complex?filter[name]=500 Alton Road```
+    - ```http://127.0.0.1:20080/complex?filter[complex_id]=45```
+4. Filter complex by city_id
+    - ```http://127.0.0.1:20080/complex?filter[city_id]=1```

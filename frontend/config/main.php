@@ -36,14 +36,25 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'complex',
+                    'extraPatterns' => [
+                        '{id}/<name:\w+>' => 'options',
+                    ],
+                    'pluralize' => false,
+                ],
+                '/' => 'site/index',
+                '<_a>' => 'site/<_a>',
+//                '<_c>/<id:\d+>' => '<_c>/view',
+//                '<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_c>/<_a>',
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
