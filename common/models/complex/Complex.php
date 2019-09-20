@@ -4,6 +4,7 @@ namespace common\models\complex;
 
 use yii\helpers\Url;
 use common\models\User;
+use common\behaviors\softdelete\SoftDeleteBehavior;
 use tuyakhov\jsonapi\Inflector;
 use tuyakhov\jsonapi\LinksInterface;
 use tuyakhov\jsonapi\ResourceInterface;
@@ -24,6 +25,7 @@ use yii\web\Link;
  * @property int $updated_by
  * @property string $created_at
  * @property string $updated_at
+ * @property int $is_deleted
  */
 class Complex extends \yii\db\ActiveRecord implements LinksInterface, ResourceInterface
 {
@@ -41,6 +43,10 @@ class Complex extends \yii\db\ActiveRecord implements LinksInterface, ResourceIn
                 'class' => TimestampBehavior::class,
                 'value' => new Expression('NOW()'),
             ],
+            [
+                'class' => SoftDeleteBehavior::class,
+                'attribute' => 'is_deleted'
+            ]
         ];
     }
 
@@ -65,6 +71,7 @@ class Complex extends \yii\db\ActiveRecord implements LinksInterface, ResourceIn
             [['created_by', 'updated_by'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['name', 'address'], 'string', 'max' => 255],
+            ['is_deleted', 'default', 'value' => 0],
         ];
     }
 
@@ -82,6 +89,7 @@ class Complex extends \yii\db\ActiveRecord implements LinksInterface, ResourceIn
             'updated_by' => 'Updated By',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'is_deleted' => 'Is Deleted',
         ];
     }
 
@@ -109,5 +117,10 @@ class Complex extends \yii\db\ActiveRecord implements LinksInterface, ResourceIn
         return [
 //            Link::REL_SELF => Url::to(["$controller/view", 'id' => $this->getId()], true)
         ];
+    }
+
+    public static function find()
+    {
+        return new ComplexQuery(get_called_class());
     }
 }

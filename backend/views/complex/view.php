@@ -22,6 +22,15 @@ use yii\widgets\DetailView;
                     'title' => Yii::t('app', 'Update'),
                     'class' => 'btn btn-primary'
                 ]); ?>
+
+                <?= Html::a('<i class="glyphicon glyphicon-trash"></i>', ['delete', 'id' => $model->complex_id], [
+                    'title' => Yii::t('app', 'Delete'),
+                    'class' => 'btn btn-danger',
+                    'data' => [
+                        'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                        'method' => 'post',
+                    ],
+                ]); ?>
             </div>
         </div>
 

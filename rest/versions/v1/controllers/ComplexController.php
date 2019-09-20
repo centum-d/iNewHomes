@@ -37,7 +37,7 @@ class ComplexController extends \yii\rest\Controller
     {
         return [
             'index' => [
-                'class' => 'rest\versions\v1\actions\IndexAction',
+                'class' => 'rest\versions\v1\actions\ComplexIndexAction',
                 'modelClass' => Complex::class,
             ],
             'view' => [

@@ -145,7 +145,7 @@ class ComplexController extends \yii\web\Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($id)->softDelete();
 
         return $this->redirect(['index']);
     }
@@ -161,7 +161,7 @@ class ComplexController extends \yii\web\Controller
      */
     protected function findModel($id)
     {
-        $model = Complex::findOne($id);
+        $model = Complex::find()->where(['complex_id' => $id])->notDeleted()->one();
 
         if ($model !== null) {
             return $model;

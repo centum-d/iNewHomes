@@ -8,7 +8,7 @@ use yii\data\ActiveDataProvider;
  * Class IndexAction
  * @package rest\versions\v1\actions
  */
-class IndexAction extends \tuyakhov\jsonapi\actions\IndexAction
+class ComplexIndexAction extends \tuyakhov\jsonapi\actions\IndexAction
 {
 
     public function run()
@@ -54,6 +54,8 @@ class IndexAction extends \tuyakhov\jsonapi\actions\IndexAction
                 ':city_id' => $filter['city_id']
             ]);
         }
+
+        $query->notDeleted();
 
         return \Yii::createObject([
             'class' => ActiveDataProvider::class,

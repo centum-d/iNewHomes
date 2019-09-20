@@ -39,7 +39,7 @@ class ComplexSearch extends Complex
      */
     public function search($params)
     {
-        $query = Complex::find();
+        $query = Complex::find()->notDeleted();
 
         $query->joinWith(['createdBy cb', 'updatedBy ub']);
 
