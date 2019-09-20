@@ -1,16 +1,15 @@
 <?php
 
-namespace frontend\controllers;
+namespace rest\versions\v1\controllers;
 
 use common\models\complex\Complex;
 use yii\filters\ContentNegotiator;
 use yii\helpers\ArrayHelper;
 use yii\web\Response;
 
-
 /**
  * Class ComplexController
- * @package frontend\controllers
+ * @package rest\versions\v1\controllers
  */
 class ComplexController extends \yii\rest\Controller
 {
@@ -38,7 +37,7 @@ class ComplexController extends \yii\rest\Controller
     {
         return [
             'index' => [
-                'class' => 'frontend\actions\IndexAction',
+                'class' => 'rest\versions\v1\actions\IndexAction',
                 'modelClass' => Complex::class,
             ],
             'view' => [

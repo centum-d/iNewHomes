@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers;
+namespace rest\versions\v1\controllers;
 
 use common\models\City;
 use yii\filters\ContentNegotiator;
@@ -9,7 +9,7 @@ use yii\web\Response;
 
 /**
  * Class CityController
- * @package frontend\controllers
+ * @package rest\versions\v1\controllers
  */
 class CityController extends \yii\rest\Controller
 {

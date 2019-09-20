@@ -40,10 +40,6 @@ $this->registerJs("
               this.clickHandler(selected)
             }
         },
-        data: function () {
-            return {
-            }
-        }
     })
 
     var app = new Vue({
@@ -159,7 +155,7 @@ $this->registerJs("
         <nav aria-label="Page navigation example">
             <ul class="pagination m-0" v-if="pageCount > 1">
                 <li class="page-item" v-for="i in pageCount">
-                    <a @click="handlePageSelected(i)" class="page-link" href="#">{{ i }}</a>
+                    <span @click="handlePageSelected(i)" class="page-link">{{ i }}</span>
                 </li>
             </ul>
         </nav>

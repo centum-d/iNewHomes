@@ -129,6 +129,10 @@ a.desc:after {
     margin-bottom: 10px;
 }
 
+.pagination-wrapper .page-link {
+    cursor: pointer;
+}
+
 .page-info {
     display: flex;
     align-items: center;

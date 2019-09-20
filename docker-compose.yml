@@ -22,6 +22,16 @@ services:
       # Mount source-code for development
       - ./:/app
 
+  rest:
+    build: rest
+    ports:
+      - 23080:80
+    volumes:
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      # Mount source-code for development
+      - ./:/app
+
   pgsql:
     image: mdillon/postgis:9.5
     ports:

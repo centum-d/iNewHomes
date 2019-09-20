@@ -1,12 +1,12 @@
 <?php
 
-namespace frontend\actions;
+namespace rest\versions\v1\actions;
 
 use yii\data\ActiveDataProvider;
 
 /**
  * Class IndexAction
- * @package frontend\actions
+ * @package rest\versions\v1\actions
  */
 class IndexAction extends \tuyakhov\jsonapi\actions\IndexAction
 {

@@ -61,3 +61,7 @@ We have to use only `dev` environment as this is a test app and we do not need `
     - ```http://127.0.0.1:20080/complex?filter[complex_id]=45```
 4. Filter complex by city_id
     - ```http://127.0.0.1:20080/complex?filter[city_id]=1```
+    
+## Task 4
+
+1. Added rest app http://127.0.0.1:23080
